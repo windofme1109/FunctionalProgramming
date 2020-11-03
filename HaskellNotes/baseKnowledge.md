@@ -62,6 +62,19 @@
    ```
         doubleMe x = x * x
    ```
+   将其保存为 `baby.hs`，然后在 `ghci` 的环境下，输入：`:l baby`，表示加载这模块，`:l` 是 `:load` 的简写。然后输出：
+   ```
+      [1 of 1] Compiling Main             ( baby.hs, interpreted )
+      Ok, one module loaded.  
+   ```
+   此时我们就可以使用 `baby.hs` 中的函数了。
+   输入：`doubleMe 5`，输出：`10`。
 
-
-
+2. `if` 语句说明
+   - 在 Haskell 中，if 语句的 else 部分是不可省略。每个函数和表达式都要返回一个结果。例如：
+   ```
+   doubleSmallNumber x = if x > 100
+                         then x
+                         else x * 2
+   ```
+   Haskell 中的 `if` 语句的另一个特点就是它其实是个表达式，表达式就是返回一个值的一段代码。`5` 是一个表达式，`x + y` 也是一个表达式。
